@@ -1,24 +1,23 @@
-Instruction for RAM Mapper:
-~~~~~~~~~~~~~~~~~~~~~~~~
-Open in PowerShell:
+Summary:
+The RAM Mapper is a python CAD tool that helps find the optimal combination of SRAM and LUTRAM in an FPGA archiecture (minimize the circuit space).
 
-python RM.py
-~~~~~~~~~~~~~~~~~~~~~~~~~
-It will run the command on the default setting. Output file-name: output.txt. The checker.exe provided can check the legality of output and calculate the area of the solution by typing the following command into the PowerShell:
+~~~~~~~~~~~~~~~~~~~~~~~
+Input Files:
+logic_block_count.txt: contains the total number of non-RAM-related general logic for 69 benchmarks.
+logic_rams.txt: contains information about the corresponding logic RAMs for each benchmark.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+Running the progrtam:
+1. Open PowerShell:
+2. execute RM.py. This will run the RAM Mapper tool with the default settings.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+Checking the legality of the output:
+The checker.exe program provided can be used to verify the legality of the output and calculate the area of the solution. To use it, type the following command into PowerShell:
 
 ./checker -d logical_rams.txt logic_block_count.txt output.txt
 
-#########################
-~What is this program?
-
-It is one of my project codes for the FPGA course. The goal is to design a RAM Mapper CAD tool to find the best combination of SRAM and LUTRAM (minimizing the circuit's space). 
-
-There are three types of RAMs (8k SRAM, 128k SRAM, and LUTRAM). For every ten logic blocks, there is an 8k SRAM, and for every 100k, there is 128K RAM. 50% of logic blocks can be implemented as LUTRAM. 
-
-My program needs to read the total number of not RAM-related general logic from logic_block_count.txt corresponding logic RAMs in logic_rams.txt for 69 benchmarks.
-
-Other requirements, such as RAM capability and external circuitries (MUX) are also considered.
-
+Note: In this program, there are three types of RAMs: 8k SRAM, 128k SRAM, and LUTRAM. For every ten logic blocks, there is an 8k SRAM, and for every 100k, there is 128K RAM. 50% of logic blocks can be implemented as LUTRAM. Additionally, other requirements, such as RAM capability and external circuitries (MUX), are also considered in the optimization.
 
 
 ~Why do I choose this code?
