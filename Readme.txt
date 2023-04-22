@@ -17,10 +17,10 @@ The checker.exe program provided can be used to verify the legality of the outpu
 
 ./checker -d logical_rams.txt logic_block_count.txt output.txt
 
-Note: In this program, there are three types of RAMs: 8k SRAM, 128k SRAM, and LUTRAM. For every ten logic blocks, there is an 8k SRAM, and for every 100k, there is 128K RAM. 50% of logic blocks can be implemented as LUTRAM. Additionally, other requirements, such as RAM capability and external circuitries (MUX), are also considered in the optimization.
+Note: There are three types of RAMs available, including 8k SRAM, 128k SRAM, and LUTRAM. By default, an 8k SRAM is allocated for every ten logic blocks, and a 128k RAM is allocated for every 100k logic blocks. Additionally, 50% of logic blocks can be implemented using LUTRAM.
 
 
 ~Why do I choose this code?
  
-It is a rather long code :) Thanks for your patience! I chose this code because it is my individual work and related to CAD Tools. It shows my understanding of python and my ability to handle relatively complex tasks. The result of 2.2e8 is considered as a Good optimization by my instructor.
+I selected this project because I developed it independently, and it is related to manual testing. It demonstrates my proficiency in Python and my capability to tackle complex tasks. My instructor considers a result of 2.2e8 to be a good optimization.
 
